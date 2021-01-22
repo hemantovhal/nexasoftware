@@ -100,7 +100,7 @@ $('#stud_info').submit(function (e) {
 });
 
 //delete client record
-$("#example1").on('click', '.deleteStudent', function () {
+$("#refresh").on('click', '.deleteStudent', function () {
     let id = $(this).parents("tr").attr("id");
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
