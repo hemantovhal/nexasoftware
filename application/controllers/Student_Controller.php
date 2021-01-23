@@ -13,11 +13,11 @@ class Student_Controller extends CI_Controller
     public function post_student_details()
     {
         $id  = $this->uri->segment(3);
+        $data["id"] = $id;
         if (is_numeric($id) && !empty($id)) {
             $data['student'] = $this->sm->is_student_details_exist($id);
-            $this->load->view('Student_Form', $data);
         }
-        $this->load->view('Student_Form');
+        $this->load->view('Student_Form',$data);
     }
 
     public function set_student_details()
