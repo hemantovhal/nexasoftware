@@ -140,6 +140,7 @@ $("#refresh").on('click', '.deleteStudent', function () {
                             'success'
                         )
                         $("#" + id).remove();
+                        $('#stud_info').trigger("reset");
                     } else if (res == 2) {
                         swalWithBootstrapButtons.fire(
                             'Invalid!',
